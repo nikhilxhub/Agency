@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${instrumentSerif.variable} ${poppins.variable} antialiased`}
+        className={`${instrumentSerif.variable} ${poppins.variable} antialiased overflow-x-hidden flex flex-col min-h-screen`}
       >
         <Navigation />
         {children}
