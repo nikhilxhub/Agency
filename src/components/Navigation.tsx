@@ -21,7 +21,7 @@ export function Navigation() {
       <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur">
         <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6 lg:px-12">
           <Link className="font-serif text-2xl font-semibold text-gray-900" href="/">
-            Agency
+            MerkeL-Studios
           </Link>
 
           <nav className="hidden items-center gap-8 text-sm font-medium text-gray-800 md:flex">

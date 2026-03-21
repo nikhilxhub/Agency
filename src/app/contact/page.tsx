@@ -158,7 +158,7 @@ export default function ContactPage() {
               <div>
                 <div className="text-sm font-medium text-gray-800">Location</div>
                 <div className="mt-2 text-base text-gray-700">
-                  San Francisco, CA
+                  INDIA
                 </div>
               </div>
               <div>

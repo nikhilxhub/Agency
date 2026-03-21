@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
 
 export function FloatingBookCall() {
   const calUrl = process.env.NEXT_PUBLIC_CAL_COM;
@@ -54,12 +53,11 @@ export function FloatingBookCall() {
           >
             {/* Image — cropped to show the faces (bottom portion of original) */}
             <div className="relative h-[90px] w-[100px] flex-shrink-0 overflow-hidden">
-              <Image
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src="/book-call.png"
                 alt=""
-                fill
-                className="object-cover object-bottom transition-all duration-500 group-hover:scale-110 group-hover:brightness-125"
-                sizes="100px"
+                className="absolute inset-0 h-full w-full object-cover object-bottom transition-all duration-500 group-hover:scale-110 group-hover:brightness-125"
               />
               {/* Right-edge gradient to blend into the card */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent from-40% to-gray-900" />
