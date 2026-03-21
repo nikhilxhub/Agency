@@ -87,7 +87,7 @@ export default function Home() {
     <main className="bg-white text-gray-900">
       <section className="relative flex min-h-[90svh] items-center overflow-hidden">
         {/* 3D Background */}
-        {/* <Hero3D /> */}
+         {/* <Hero3D /> */}
 
         <div className="relative z-10 mx-auto w-full max-w-6xl px-6 lg:px-12">
           <Reveal>

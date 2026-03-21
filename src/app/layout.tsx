@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Instrument_Serif, Poppins } from "next/font/google";
 import { Footer } from "@/components/Footer";
+import { FloatingBookCall } from "@/components/FloatingBookCall";
 import { Navigation } from "@/components/Navigation";
 import "./globals.css";
 
@@ -37,6 +38,7 @@ export default function RootLayout({
         <Navigation />
         {children}
         <Footer />
+        <FloatingBookCall />
       </body>
     </html>
   );
