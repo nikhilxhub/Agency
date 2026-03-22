@@ -122,6 +122,8 @@ export default function ContactPage() {
                   <option value="" disabled>
                     Select one
                   </option>
+                  <option>$500-$2.5k</option>
+                  <option>$2.5k-$10k</option>
                   <option>$10k–$25k</option>
                   <option>$25k–$50k</option>
                   <option>$50k–$100k</option>

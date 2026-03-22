@@ -1,4 +1,5 @@
-import { TestimonialsOverlay } from "@/components/TestimonialsOverlay";
+import { FounderSpotlight } from "@/components/FounderSpotlight";
+// import { TestimonialsOverlay } from "@/components/TestimonialsOverlay";
 import { Reveal } from "@/components/Reveal";
 // import { Hero3D } from "@/components/Hero3D";
 
@@ -44,43 +45,43 @@ const processSteps = [
   },
 ];
 
-const caseStudies = [
-  {
-    label: "CASE STUDY",
-    title: "Harbor",
-    description:
-      "A fintech MVP launched in 6 weeks with a scalable API and secure onboarding.",
-    metrics: ["50% faster launch", "10k users in 3 months", "99.9% uptime"],
-  },
-  {
-    label: "CASE STUDY",
-    title: "Arcade Health",
-    description:
-      "A healthcare platform rebuilt for reliability and compliance at scale.",
-    metrics: ["2x release velocity", "40% fewer bugs", "HIPAA-ready stack"],
-  },
-];
+// const caseStudies = [
+//   {
+//     label: "CASE STUDY",
+//     title: "Harbor",
+//     description:
+//       "A fintech MVP launched in 6 weeks with a scalable API and secure onboarding.",
+//     metrics: ["50% faster launch", "10k users in 3 months", "99.9% uptime"],
+//   },
+//   {
+//     label: "CASE STUDY",
+//     title: "Arcade Health",
+//     description:
+//       "A healthcare platform rebuilt for reliability and compliance at scale.",
+//     metrics: ["2x release velocity", "40% fewer bugs", "HIPAA-ready stack"],
+//   },
+// ];
 
-const testimonials = [
-  {
-    quote:
-      "The team consistently delivered high-quality work on time. Their attention to detail was outstanding throughout the build.",
-    author: "Vikram Shastry",
-    role: "CEO, Black Lotus",
-  },
-  {
-    quote:
-      "Professional, communicative, and efficient. They delivered a product that has been instrumental in our growth.",
-    author: "Gautami Raiker",
-    role: "Co-Founder, Contractzy",
-  },
-  {
-    quote:
-      "Highly recommend for anyone looking for outstanding design and clean execution. Their expertise was invaluable.",
-    author: "Vaishali Chitnis",
-    role: "Founder, Spicy Tango",
-  },
-];
+// const testimonials = [
+//   {
+//     quote:
+//       "The team consistently delivered high-quality work on time. Their attention to detail was outstanding throughout the build.",
+//     author: "Vikram Shastry",
+//     role: "CEO, Black Lotus",
+//   },
+//   {
+//     quote:
+//       "Professional, communicative, and efficient. They delivered a product that has been instrumental in our growth.",
+//     author: "Gautami Raiker",
+//     role: "Co-Founder, Contractzy",
+//   },
+//   {
+//     quote:
+//       "Highly recommend for anyone looking for outstanding design and clean execution. Their expertise was invaluable.",
+//     author: "Vaishali Chitnis",
+//     role: "Founder, Spicy Tango",
+//   },
+// ];
 
 export default function Home() {
   return (
@@ -165,7 +166,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="work" className="py-24">
+      {/* <section id="work" className="py-24">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <h2 className="font-serif text-4xl font-medium md:text-5xl">
             Case Studies
@@ -222,9 +223,94 @@ export default function Home() {
             ))}
           </div>
         </div>
+      </section> */}
+
+      <section id="founder-note" className="border-y border-gray-200 bg-gray-50 py-24">
+        <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-12">
+          <div>
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-gray-500">
+              Founder Note
+            </p>
+            <h2 className="mt-4 max-w-lg font-serif text-4xl font-medium leading-tight text-gray-900 md:text-5xl">
+              Built by a developer, for founders who need clarity and momentum.
+            </h2>
+          </div>
+
+          <div className="space-y-6 text-lg leading-8 text-gray-700">
+            <p>
+              This agency is still early, and that is part of the value. When we
+              work together, you are not getting passed between sales, strategy,
+              and delivery layers. You are working directly with the person
+              thinking through the product, shaping the architecture, and
+              building the experience.
+            </p>
+            <p>
+              I started this studio after working as a developer and seeing how
+              often founders needed a technical partner who could move fast,
+              communicate clearly, and stay close to the actual product. The
+              goal is simple: help ambitious teams ship clean MVPs without the
+              usual agency drag.
+            </p>
+          </div>
+        </div>
+
+        <div className="mx-auto mt-12 grid max-w-6xl gap-6 px-6 md:grid-cols-3 lg:px-12">
+          <div className="rounded-sm border border-gray-200 bg-white p-6">
+            <div className="text-xs font-medium uppercase tracking-[0.18em] text-gray-500">
+              Direct Access
+            </div>
+            <p className="mt-4 text-base leading-7 text-gray-700">
+              You work directly with the builder making technical decisions, not
+              an account layer translating them.
+            </p>
+          </div>
+          <div className="rounded-sm border border-gray-200 bg-white p-6">
+            <div className="text-xs font-medium uppercase tracking-[0.18em] text-gray-500">
+              Small Client Roster
+            </div>
+            <p className="mt-4 text-base leading-7 text-gray-700">
+              We keep the project load intentionally lean so each build gets
+              senior attention and quicker feedback loops.
+            </p>
+          </div>
+          <div className="rounded-sm border border-gray-200 bg-white p-6">
+            <div className="text-xs font-medium uppercase tracking-[0.18em] text-gray-500">
+              Launch Focus
+            </div>
+            <p className="mt-4 text-base leading-7 text-gray-700">
+              The priority is not endless planning. It is shipping the right
+              version, getting it live, and improving from there.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <TestimonialsOverlay testimonials={testimonials} />
+      <FounderSpotlight />
+
+      <section id="contact" className="border-t border-gray-200 bg-white py-28">
+        <div className="mx-auto flex max-w-6xl flex-col items-center px-6 text-center lg:px-12">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-gray-500">
+            Start With A Conversation
+          </p>
+          <h2 className="mt-4 max-w-3xl font-serif text-4xl font-medium text-gray-900 md:text-5xl">
+            If you need a developer-led partner to shape and ship your MVP, let&apos;s talk.
+          </h2>
+          <p className="mt-6 max-w-2xl text-lg text-gray-600">
+            We&apos;re currently taking on a small number of founder-led projects
+            and keeping the collaboration hands-on from first call to launch.
+          </p>
+          <div className="mt-10">
+            <a
+              className="btn-border-animate inline-flex h-12 items-center justify-center rounded-sm bg-gray-900 px-8 text-sm font-medium text-white transition duration-300"
+              href="/contact"
+            >
+              Book a discovery call
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* <TestimonialsOverlay testimonials={testimonials} /> */}
     </main>
   );
 }

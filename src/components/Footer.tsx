@@ -52,7 +52,7 @@ export function Footer() {
           </div>
           <div className="mt-4 space-y-2">
             <div>hello@agency.com</div>
-            <div>San Francisco, CA</div>
+            <div>India</div>
             <div>Response in 24 hours</div>
           </div>
         </div>
