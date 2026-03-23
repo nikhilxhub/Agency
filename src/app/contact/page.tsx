@@ -1,6 +1,51 @@
 import { FAQ } from "@/components/FAQ";
 import { Reveal } from "@/components/Reveal";
 
+function getSocialUrl(publicKey: string, fallbackKey: string) {
+  return process.env[publicKey] || process.env[fallbackKey] || "#";
+}
+
+const socialLinks = [
+  {
+    label: "X",
+    href: getSocialUrl("NEXT_PUBLIC_X_URL", "X_URL"),
+    icon: (
+      <svg
+        aria-hidden="true"
+        className="h-4 w-4"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path d="M18.901 2H21.99l-6.75 7.713L23.176 22h-6.214l-4.87-6.938L6.02 22H2.93l7.22-8.252L.824 2H7.2l4.402 6.268L18.901 2Zm-1.086 18.128h1.712L6.27 3.776H4.434l13.38 16.352Z" />
+      </svg>
+    ),
+  },
+  {
+    label: "Instagram",
+    href: getSocialUrl("NEXT_PUBLIC_INSTAGRAM_URL", "INSTAGRAM_URL"),
+    icon: (
+      <svg
+        aria-hidden="true"
+        className="h-4 w-4"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <rect
+          x="3.5"
+          y="3.5"
+          width="17"
+          height="17"
+          rx="4.25"
+          stroke="currentColor"
+          strokeWidth="1.8"
+        />
+        <circle cx="12" cy="12" r="4.1" stroke="currentColor" strokeWidth="1.8" />
+        <circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" />
+      </svg>
+    ),
+  },
+];
+
 const faqs = [
   {
     question: "How long does an MVP take?",
@@ -152,9 +197,29 @@ export default function ContactPage() {
           <Reveal>
             <div className="space-y-6 rounded-sm border border-gray-200 bg-gray-100 p-6 md:p-10">
               <div>
-                <div className="text-sm font-medium text-gray-800">Email</div>
-                <div className="mt-2 text-base text-gray-900">
-                  hello@agency.com
+                <div className="text-sm font-medium text-gray-800">Socials</div>
+                <div className="mt-3 flex flex-wrap gap-3">
+                  {socialLinks.map((social) => {
+                    const disabled = social.href === "#";
+
+                    return (
+                      <a
+                        key={social.label}
+                        aria-label={social.label}
+                        aria-disabled={disabled}
+                        className={`inline-flex h-11 w-11 items-center justify-center rounded-full border transition ${
+                          disabled
+                            ? "cursor-not-allowed border-gray-200 bg-gray-200 text-gray-500"
+                            : "border-gray-300 bg-white text-gray-900 hover:border-gray-900 hover:bg-gray-900 hover:text-white"
+                        }`}
+                        href={social.href}
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        {social.icon}
+                      </a>
+                    );
+                  })}
                 </div>
               </div>
               <div>

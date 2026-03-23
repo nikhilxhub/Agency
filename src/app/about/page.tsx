@@ -47,7 +47,7 @@ export default function AboutPage() {
           <div className="max-w-3xl">
             <Reveal>
               <p className="text-lg text-gray-700">
-                We started Agency after years inside startups where velocity
+                We started  after years inside startups where velocity
                 suffered under messy code and unclear priorities. We believe MVPs
                 should be clean, reliable, and ready to scale from day one.
               </p>

@@ -20,7 +20,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Agency — Clean MVPs for Tech Startups",
+  title: "Merkel Studios — Clean MVPs for Tech Startups",
   description:
     "We build clean, launch-ready MVPs, websites, and apps for tech startups with ongoing maintenance.",
 };
